@@ -1,0 +1,51 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.kavoon-regular {
+    font-family: "Kavoon", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    background-image: url("images/pexels-fwstudio-33348-164005.jpg");
+    background-size: cover;
+}
+
+
+#title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10vh;
+    font-family: "Kavoon", serif;
+    font-size: large;
+}
+
+#game {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.option {
+    width: 20vw;
+    height: auto;
+}
+
+#gameInfo{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    font-family: "Kavoon", serif;
+    align-items: center;
+    gap: 5vh
+}
+
+#scores {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 10vw;
+}
