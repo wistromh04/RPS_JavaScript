@@ -4,6 +4,7 @@ let scissors = "scissors";
 
 let humanScore = 0;
 let computerScore = 0;
+let winner = null;
 
 function getComputerChoice() {
     let computersChoice = Math.floor((Math.random() * 3) + 1 );
@@ -18,10 +19,13 @@ function getComputerChoice() {
 
 
 function playRound(playerSelection){
+    if (winner !== null) {
+        return; // Exit function if a winner is already declared
+    }
+
     let computerChoice = getComputerChoice();
     let humanChoice =  playerSelection.toLowerCase();
     let resultDiv = document.getElementById("result");
-    let winner;
 
     if (humanChoice === computerChoice) {
         resultDiv.textContent = "It's a tie! Both chose "+ humanChoice +".";
@@ -78,4 +82,16 @@ function announceWinner(winner) {
     document.getElementById('rockBtn').disabled = true;
     document.getElementById('paperBtn').disabled = true;
     document.getElementById('scissorsBtn').disabled = true;
+}
+
+function reset() {
+    // Reset game state
+    humanScore = 0;
+    computerScore = 0;
+    winner = null;
+    updateScores();
+    document.getElementById('result').textContent = '';
+    document.getElementById('rockBtn').disabled = false;
+    document.getElementById('paperBtn').disabled = false;
+    document.getElementById('scissorsBtn').disabled = false;
 }

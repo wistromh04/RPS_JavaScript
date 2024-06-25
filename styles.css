@@ -13,6 +13,10 @@
 body {
     background-image: url("images/pexels-fwstudio-33348-164005.jpg");
     background-size: cover;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 
@@ -23,29 +27,57 @@ body {
     margin-top: 10vh;
     font-family: "Kavoon", serif;
     font-size: large;
+    margin-bottom: 20vh;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 60%;
 }
 
 #game {
     display: flex;
     justify-content: space-evenly;
+    gap: 10vw;
 }
 
 .option {
-    width: 20vw;
+    width: 15vw;
     height: auto;
+    cursor: pointer;
 }
+
+.option:hover{
+    transform: scale(1.1);
+}
+
+
 
 #gameInfo{
     display: flex;
     flex-direction: column;
-    margin-top: 20px;
+    margin-top: 20vh;
     font-family: "Kavoon", serif;
     align-items: center;
-    gap: 5vh
+    gap: 5vh;
+    font-size: 2em;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    bottom: 0;
+    width: 50%;
 }
 
 #scores {
     display: flex;
     justify-content: space-evenly;
     gap: 10vw;
+}
+
+#resetBtn {
+    width: 30vw;
+    height: 5vh;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: rgba(255, 0, 0, 0.8);
+    font-size: larger;
 }
